@@ -3,5 +3,8 @@
 
 ![image](https://github.com/JunHuaBai96/VBA-Excel_order/assets/102909786/4608dfc9-be6e-4fe4-8f2b-45a65aad1f07)
 
+### 资料备注
+Start文件原始文件，OK文件项目终稿文件，提供Start文件方便读者练习！
+
 ##  致谢
 非常感谢b站up主PAPAYA电脑教室（ https://space.bilibili.com/402780815 ）的分享。
