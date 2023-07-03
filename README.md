@@ -11,7 +11,9 @@ Windows 10，Microsoft 2019 Excel
 
 ## 问题解答
 1.无法运行OK.xlsm文件中的宏文件？
-勾选“启用VBA宏时启用 Excel 4.0 宏”。文档中原有的宏可以正常执行。
+勾选“启用所有宏”。文档中原有的宏可以正常执行。
+![image](https://github.com/JunHuaBai96/VBA-Excel_order/assets/102909786/8018bda6-0546-4179-98f2-72af0a14f6c7)
+![image](https://github.com/JunHuaBai96/VBA-Excel_order/assets/102909786/804d1f23-17f9-4f4c-be9c-265fb53d5933)
 
 ##  致谢
 非常感谢b站up主PAPAYA电脑教室（ https://space.bilibili.com/402780815 ）的分享。
