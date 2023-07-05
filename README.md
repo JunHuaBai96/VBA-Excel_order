@@ -14,6 +14,7 @@ Windows 10，Microsoft 2019 Excel
 勾选“启用所有宏”。文档中原有的宏可以正常执行。
 ![image](https://github.com/JunHuaBai96/VBA-Excel_order/assets/102909786/8018bda6-0546-4179-98f2-72af0a14f6c7)
 ![image](https://github.com/JunHuaBai96/VBA-Excel_order/assets/102909786/804d1f23-17f9-4f4c-be9c-265fb53d5933)
+
 2.案例中餐点价格过于昂贵？
 案例中餐点价格是按照中国台湾地区的价格进行统计的，即新台币价格。
 
