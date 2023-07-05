@@ -1,0 +1,61 @@
+Sub 新增餐点()
+
+Dim 餐点名称 As String
+Dim 空点行 As Integer
+Dim 储存格 As Range, 范围 As Range
+
+Set 范围 = Range("D5:D16")
+
+餐点名称 = Application.Caller
+空点行 = WorksheetFunction.CountA(Sheets("首页").Range("D5:D16")) + 5
+
+For Each 储存格 In 范围
+    If 餐点名称 = 储存格.Value Then
+        储存格.Offset(0, 1).Value = 储存格.Offset(0, 1).Value + 1
+        Exit Sub
+    End If
+Next 储存格
+
+Cells(空白行, "D").Value = 餐点名称
+Cells(空白行, "E").Value = 1
+
+End Sub
+
+Sub 删除餐点()
+
+Dim 最后一行 As Integer
+
+最后一行 = WorksheetFunction.CountA(Sheets("首页").Range("D5:D16")) + 4
+Range("D" & 最后一行 & ":E" & 最后一行).ClearContents
+
+End Sub
+
+Sub 打印订单()
+
+Sheets("首页").PrintOut
+
+End Sub
+
+Sub 新订单()
+
+Dim 行数 As Integer
+Dim 最后一行 As Integer
+Dim x As Long ' 资料库最后一行
+
+最后一行 = WorksheetFunction.CountA(Sheets("首页").Range("D5:D16")) + 4
+
+For 行数 = 5 To 最后一行
+x = WorksheetFunction.CountA(Sheets("资料库").Range("A:A")) + 1
+Sheets("资料库").Cells(x, "A").Value = Sheets("首页").Range("E2").Value
+Sheets("资料库").Cells(x, "B").Value = Sheets("首页").Range("G2").Value
+Sheets("资料库").Cells(x, "C").Value = Sheets("首页").Range("D" & 行数).Value
+Sheets("资料库").Cells(x, "D").Value = Sheets("首页").Range("E" & 行数).Value
+Sheets("资料库").Cells(x, "E").Value = Sheets("首页").Range("F" & 行数).Value
+Sheets("资料库").Cells(x, "F").Value = Sheets("首页").Range("G" & 行数).Value
+Next 行数
+
+Sheets("首页").Range("D5:E16").ClearContents
+Sheets("首页").Range("E2").Value = Sheets("首页").Range("E2").Value + 1
+Sheets("首页").Range("G2").Value = Now
+
+End Sub
